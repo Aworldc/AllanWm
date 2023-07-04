@@ -1,5 +1,5 @@
 # AllanWm
-A highly customizable replacement for the windows taskbar, startmenu, and eventually, window manager, written in python.
+A highly customizable replacement for the windows taskbar, startmenu, and eventually, window manager. It's written in python.
 
 ## Progress
 
@@ -18,3 +18,4 @@ A highly customizable replacement for the windows taskbar, startmenu, and eventu
 | Theming: Colours | 🟡 |
 | Theming: Fonts | 🔴 |
 | Theming: More | 🔴 |
+| Documentation | 🔴 |
