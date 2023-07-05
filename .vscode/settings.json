@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        ".allanwmrc": "jsonc"
+    },
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+}
