@@ -14,7 +14,7 @@ A highly customizable replacement for the windows taskbar, startmenu, and eventu
 | Power menu | 🔴 |
 | Tiling Window manager | 🔴 |
 | Virtual desktops ("Workspaces") | 🟡 |
-| Clock | 🔴 |
+| Clock | 🟡 |
 | Theming: Colours | 🟡 |
 | Theming: Fonts | 🔴 |
 | Theming: More | 🔴 |
