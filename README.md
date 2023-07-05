@@ -7,7 +7,7 @@ A highly customizable replacement for the windows shell written in python with P
 🟡 Working on it
 🟢 Done
 
-| Feature ("Preferred name") | Status |
+| Feature | Status |
 | ----------- | ----------- |
 | Taskbar ("Bar") | 🟡 |
 | Start menu ("App launcher") | 🔴 |
