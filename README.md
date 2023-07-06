@@ -1,7 +1,7 @@
 # AllanWm
 A highly customizable replacement for the windows shell written in python with PySide6.
 
-## Progress
+## Roadmap
 
 🔴 Not started
 🟡 Working on it
@@ -19,3 +19,4 @@ A highly customizable replacement for the windows shell written in python with P
 | Theming: Fonts | 🔴 |
 | Theming: More | 🔴 |
 | Documentation | 🔴 |
+
