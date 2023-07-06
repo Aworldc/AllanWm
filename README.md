@@ -21,7 +21,7 @@ A highly customizable replacement for the windows shell written in python with P
 | Documentation | 🟡 |
 
 ## Setup
-NOTE: These installation instructions are not complete. They are a work in progress
+NOTE: These installation instructions are not complete. They are a work in progress<br>
 (requires windows 10 and python 3)
 
 1. Move the taskbar to the top of the screen
