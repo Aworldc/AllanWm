@@ -10,12 +10,12 @@ A highly customizable replacement for the windows shell written in python with P
 | Feature | Status |
 | ----------- | ----------- |
 | Bar | 🟡 |
-| App launcher | 🟡 |
+| App launcher | 🟢 |
 | Power menu | 🔴 |
 | Tiling Window manager | 🔴 |
 | Workspaces | 🔴 |
 | Clock | 🟢 |
-| Theming: Colours | 🔴 |
+| Theming: Colours | 🟡 |
 | Theming: Fonts | 🔴 |
 | Theming: More | 🔴 |
 | Documentation | 🔴 |
