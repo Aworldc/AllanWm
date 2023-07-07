@@ -10,9 +10,9 @@ A highly customizable replacement for the windows shell written in python with P
 
 | Feature | Status |
 | ----------- | ----------- |
-| Bar | 🟡 |
+| Bar | 🟢 |
 | App launcher | 🟢 |
-| App switcher | 🟡 |
+| App switcher | 🟢 |
 | Power menu | 🔴 |
 | Tiling Window manager | ⚫ |
 | Workspaces | ⚫ |
@@ -21,6 +21,7 @@ A highly customizable replacement for the windows shell written in python with P
 | Theming: Fonts | 🔴 |
 | Theming: More | ⚫ |
 | Documentation | 🟡 |
+| Progress bars | ⚫ |
 
 ## Setup
 NOTE: These installation instructions are not complete. They are a work in progress.<br>
