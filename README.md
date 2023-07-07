@@ -3,6 +3,7 @@ A highly customizable replacement for the windows shell written in python with P
 
 ## Roadmap
 
+⚫ Future
 🔴 Not started
 🟡 Working on it
 🟢 Done
@@ -13,12 +14,12 @@ A highly customizable replacement for the windows shell written in python with P
 | App launcher | 🟢 |
 | App switcher | 🟡 |
 | Power menu | 🔴 |
-| Tiling Window manager | 🔴 |
-| Workspaces | 🔴 |
+| Tiling Window manager | ⚫ |
+| Workspaces | ⚫ |
 | Clock | 🟡 |
 | Theming: Colours | 🟡 |
 | Theming: Fonts | 🔴 |
-| Theming: More | 🔴 |
+| Theming: More | ⚫ |
 | Documentation | 🟡 |
 
 ## Setup
