@@ -16,7 +16,7 @@ A highly customizable replacement for the windows shell written in python with P
 | Clock | 🟡 |
 | Theming: Colours | 🟡 |
 | Documentation | 🟡 |
-| Power menu | 🔴 |
+| Power menu | 🟡 |
 | Theming: Fonts | 🔴 |
 | Tiling Window manager | ⚫ |
 | Workspaces | ⚫ |
