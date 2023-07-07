@@ -13,14 +13,14 @@ A highly customizable replacement for the windows shell written in python with P
 | Bar | 🟢 |
 | App launcher | 🟢 |
 | App switcher | 🟢 |
-| Power menu | 🔴 |
-| Tiling Window manager | ⚫ |
-| Workspaces | ⚫ |
 | Clock | 🟡 |
 | Theming: Colours | 🟡 |
-| Theming: Fonts | 🔴 |
-| Theming: More | ⚫ |
 | Documentation | 🟡 |
+| Power menu | 🔴 |
+| Theming: Fonts | 🔴 |
+| Tiling Window manager | ⚫ |
+| Workspaces | ⚫ |
+| Theming: More | ⚫ |
 | Progress bars | ⚫ |
 
 ## Setup
