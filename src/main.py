@@ -6,13 +6,16 @@ from PySide6.QtWidgets import (
     QPushButton,
     QLabel,
 )
+
 from PySide6.QtCore import Qt, QRect
 from time import sleep
-from pyautogui import size as getScreenSize, getActiveWindowTitle
+from pyautogui import size as getScreenSize, getActiveWindowTitle, getAllWindows
 from datetime import datetime
 
 from .config import AllanWmConfig
 from .programlauncher import AllanWmProgramLauncher
+from .programswitcher import AllanWmProgramSwitcher
+from .calendar import AllanWmCalendar
 
 
 class AllanWmBar(QMainWindow):
@@ -47,7 +50,6 @@ class AllanWmBar(QMainWindow):
     def do_update(self):
         self.clock.do_update()
         self.active_window.do_update()
-
 
 class AllanWmBarAppLauncherWidget(QWidget):
     def __init__(self, mainwindow):
@@ -88,8 +90,9 @@ class AllanWmBarAppLauncherWidget(QWidget):
 
     def start(self, signal):
         dlg = AllanWmProgramLauncher()
+        dlg.show()
+        dlg.update_pos()
         dlg.exec()
-
 
 class AllanWmBarActiveWindowWidget(QWidget):
     def __init__(self):
@@ -101,6 +104,8 @@ class AllanWmBarActiveWindowWidget(QWidget):
 
         self.windowlabel = QLabel("Loading...")
         self.windowlabel.setAlignment(Qt.AlignCenter)
+        self.windowlabel.mousePressEvent = self.open_switcher
+        self.windowlabel.setObjectName("BigPrick")
 
         layout.addWidget(self.windowlabel)
 
@@ -109,18 +114,27 @@ class AllanWmBarActiveWindowWidget(QWidget):
     def do_update(self):
         active_window = getActiveWindowTitle()
         self.windowlabel.setText(active_window)
-
+    def open_switcher(self, event):
+        ps = AllanWmProgramSwitcher()
+        ps.show()
+        ps.update_pos()
+        ps.exec()
 
 class AllanWmBarClockWidget(QWidget):
     def __init__(self):
         super().__init__()
 
         layout = QHBoxLayout()
+        layout.setAlignment(Qt.AlignRight)
         layout.setContentsMargins(0, 0, 7, 0)
         layout.setSpacing(0)
 
-        self.clocklabel = QLabel("Loading...")
-        self.clocklabel.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
+        self.cal = False
+
+        self.clocklabel = QPushButton("Loading...")
+        self.clocklabel.setObjectName("SmallPrick")
+
+        self.clocklabel.clicked.connect(self.show_calendar)
 
         layout.addWidget(self.clocklabel)
 
@@ -130,6 +144,16 @@ class AllanWmBarClockWidget(QWidget):
         now = datetime.now()
         self.clocklabel.setText(now.strftime("%H:%M:%S"))
 
+        if self.cal != False:
+            self.cal.do_update()
+    def show_calendar(self):
+        self.cal = AllanWmCalendar()
+        self.cal.show()
+        self.cal.update_pos()
+        self.cal.finished.connect(self.hide_calendar)
+        self.cal.open()
+    def hide_calendar(self):
+        self.cal = False
 
 def main():
     app = QApplication([])

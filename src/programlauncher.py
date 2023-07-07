@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QLabel, QDialog, QWidget, QHBoxLayout, QVBoxLayout, QPushButton
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QRect
 from os import listdir, startfile
 from os.path import isfile, join
 from operator import itemgetter
@@ -10,7 +10,6 @@ def chunkify(list, size):
     for i in range(0, len(list), size):
         outputlist.append(list[i : i + size])
     return outputlist
-
 
 def getPrograms():
     user_programs_path = (
@@ -28,13 +27,20 @@ def getPrograms():
 
     return [x for x in (sorted(user_programs + global_programs, key=itemgetter('end'))) if x['end'] != "desktop.ini"]
 
-
-def createAsshole(program, afterfn):
-    def asshole():
+def createProgram(program, afterfn):
+    def prog():
         startfile(program)
         afterfn()
-    return asshole
+    return prog
 
+def createPower(afterfn):
+    def powr(sig):
+        powerMenu()
+        afterfn()
+    return powr
+
+def powerMenu():
+    pass
 
 class AllanWmProgramLauncher(QDialog):
     def __init__(self):
@@ -54,13 +60,21 @@ class AllanWmProgramLauncher(QDialog):
 
             for program in programgroup:
                 progbtn = QPushButton(program['end'][:-4])
-                progbtn.clicked.connect(createAsshole(f"{program['base']}\\{program['end']}", self.accept))
+                progbtn.clicked.connect(
+                    createProgram(f"{program['base']}\\{program['end']}", self.accept)
+                )
                 sublayout.addWidget(progbtn)
+                progbtn.updateGeometry()
 
             widget.setLayout(sublayout)
             layout.addWidget(widget)
         
         layout.addSpacing(10)
+
+        powerbutton = QPushButton("Power")
+        powerbutton.clicked.connect(createPower(self.accept))
+
+        layout.addWidget(powerbutton)
 
         closebutton = QPushButton("Cancel")
         closebutton.clicked.connect(self.reject)
@@ -68,3 +82,5 @@ class AllanWmProgramLauncher(QDialog):
         layout.addWidget(closebutton)
 
         self.setLayout(layout)
+    def update_pos(self):
+        self.setGeometry(QRect(10, 40, self.width(), self.height()))

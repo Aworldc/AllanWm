@@ -1,5 +1,6 @@
 from json import loads as parseJson
 
+
 def readFileSync(path):
     with open(path, "r") as file:
         data = file.read()
@@ -8,7 +9,6 @@ def readFileSync(path):
 class AllanWmTheme:
     def __init__(self, theme_object):
         self.object = theme_object
-
     def get_stylesheet(self):
         return f'''
             QMainWindow, QDialog {{
@@ -37,8 +37,22 @@ class AllanWmTheme:
             QPushButton:hover {{
                 border: 1px solid {self.object['cursorColor']};
             }}
-        '''
 
+            #BigPrick:hover {{
+                background-color: {self.object['selectionBackground']};
+                border-bottom: 1px solid {self.object['white']};
+            }}
+
+            #SmallPrick {{
+                padding: 2px 8px;
+                background-color: transparent;
+            }}
+
+            #SmallPrick:hover {{
+                background-color: {self.object['selectionBackground']};
+                border: none;
+            }}
+        '''
 
 class AllanWmConfig:
     def __init__(self):
