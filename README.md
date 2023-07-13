@@ -31,4 +31,5 @@ NOTE: These installation instructions are not complete. They are a work in progr
 2. Move the taskbar to the top of the screen
 3. Enable "Use small taskbar buttons" in windows settings
 4. OPTIONAL: Setup [taskbarx](https://github.com/ChrisAnd1998/TaskbarX) to center the taskbar icons. This isn't a requirement, but it makes windows' animations fit in better with this project.
-5. (I haven't written this step yet
+5. Install the [Fira code](https://github.com/tonsky/FiraCode) font family
+6. (I haven't written this step yet)
