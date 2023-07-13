@@ -13,10 +13,10 @@ A highly customizable replacement for the windows shell written in python with P
 | Bar | 🟢 |
 | App launcher | 🟢 |
 | App switcher | 🟢 |
-| Clock | 🟡 |
+| Clock | 🟢 |
+| Power menu | 🟢 |
 | Theming: Colours | 🟡 |
 | Documentation | 🟡 |
-| Power menu | 🟡 |
 | Theming: Fonts | 🔴 |
 | Tiling Window manager | ⚫ |
 | Workspaces | ⚫ |
