@@ -1,5 +1,5 @@
 # AllanWm
-A gnome-inspired replacement for the windows shell written in javascript with electron.
+A Gnome-inspired replacement for the windows shell written in javascript with electron.
 
 ## Roadmap
 
@@ -18,3 +18,6 @@ A gnome-inspired replacement for the windows shell written in javascript with el
 | Dock | 🔴 |
 | System menu | 🔴 |
 | Tiling window management | ⚫ |
+
+## Credits
+The default wallpaper, licenced under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), was taken from [Gnome 44 backgrounds](https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/tree/gnome-44).
