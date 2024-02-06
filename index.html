@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="bar">
+            <div>
+                <button class="startButton">Start here</button>
+            </div>
+            <div>
+                <button class="time dashboardButton">Notifications</button>
+            </div>
+            <div>
+                <button class="systemButton">System</button>
+            </div>
+        </div>
+	<div class="start popup">
+	    This is the start menu
+	</div>
+	<div class="dashboard popup">
+	    This is the dashboard
+	</div>
+	<div class="system popup">
+	    This is the system menu
+	</div>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                height: 100vh;
+                background-image: url('./img.jpg');
+                background-size: cover;
+            }
+
+            .bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #8882;
+                backdrop-filter: blur(5px);
+            }
+
+            .bar div {
+                display: flex;
+                gap: 6px;
+                padding: 3px;
+            }
+
+            .bar button {
+                border: none;
+                border-radius: 999px;
+                background-color: transparent;
+                padding: 8px 11px;
+                color: white;
+                transition: background-color 200ms ease;
+            }
+
+            .bar button:hover {
+                background-color: #fff3;
+            }
+
+	    .popup {
+		background: #8882;
+		backdrop-filter: blur(5px);
+		border-radius: 30px;
+		padding: 20px;
+		font-family: sans-serif;
+		width: fit-content;
+		opacity: 0;
+		pointer-events: none;
+		margin: 20px;
+		color: white;
+	    }
+
+	    .popup.shown {
+		opacity: 1;
+		pointer-events: all;
+	    }
+        </style>
+        <script type="module">
+            let months = [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ]
+
+            let days = [
+                'Sunday',
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday'
+            ]
+
+            setInterval(() => {
+                let now = new Date()
+                document.querySelector('.time').innerText =
+                    `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${days[now.getDay()]} ${now.getDate()}${
+                        now.getDate() == 1 ? 'st'
+                        : now.getDate() == 2 ? 'nd'
+                        : now.getDate() == 3 ? 'rd'
+                        : 'th'
+                    } ${months[now.getMonth()]}`
+            }, 25)
+
+	    document.querySelector('.startButton').addEventListener('click', () => {
+                document.querySelector('.start').classList.toggle('shown')
+	    })
+
+            
+        </script>
+    </body>
+</html>
+
