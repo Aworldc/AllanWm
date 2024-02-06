@@ -1,5 +1,5 @@
 # AllanWm
-A highly customizable replacement for the windows shell written in javascript with electron.
+A gnome-inspired replacement for the windows shell written in javascript with electron.
 
 ## Roadmap
 
