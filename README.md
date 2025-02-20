@@ -1,6 +1,10 @@
 # AllanWm
 A highly customizable replacement for the windows shell written in python with PySide6.
 
+> [!IMPORTANT]
+> This is not maintained. It will (probably) not get finsished. I have moved to Linux and Hyprland,
+> and I am thus not interested in working on a project that exists to make windows usable.
+
 ## Roadmap
 
 ⚫ Future
